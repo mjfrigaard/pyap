@@ -26,7 +26,6 @@ htmlcov/
 .tox/
 
 # IDEs
-.vscode/
 .idea/
 *.code-workspace
 
@@ -34,3 +33,4 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
+# AI tooling (not for version control)
