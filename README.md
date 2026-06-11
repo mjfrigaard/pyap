@@ -22,6 +22,16 @@ cd pyap
 git checkout <branch_name>
 ```
 
+Create a virtual environment and install dependencies with [`uv`](https://docs.astral.sh/uv/):
+
+```bash
+uv venv .venv
+```
+
+```bash
+uv pip install -r requirements.txt
+```
+
 Run any branch with:
 
 ```bash
