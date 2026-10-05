@@ -22,7 +22,14 @@ cd pyap
 git checkout <branch_name>
 ```
 
-Run any branch with:
+Run the `01_whole-game` branch (or any branch with a `pyproject.toml`) with:
+
+```bash
+uv sync
+uv run pyap
+```
+
+Earlier branches (`02.1_shiny-app` to `02.3_proj-app`) have no `pyproject.toml`, so run them with:
 
 ```bash
 shiny run app.py
@@ -32,6 +39,7 @@ shiny run app.py
 
 | Branch | Description |
 |--------|-------------|
+| `01_whole-game` | Whole game: `app.py` to an installable package (`src/` layout, `uv`, `pytest`, `run()`) |
 | `02.1_shiny-app` | Default "Hello Shiny" template |
 | `02.2_movies-app` | Movies scatter plot app |
 | `02.3_proj-app` | App with project structure |
