@@ -22,17 +22,20 @@ cd pyap
 git checkout <branch_name>
 ```
 
-Create a virtual environment and install dependencies with [`uv`](https://docs.astral.sh/uv/):
+Create and activate a virtual environment (the `.venv/` folder isn't tracked by Git, so it carries over when you switch branches):
 
 ```bash
-uv venv .venv
+uv venv
+source .venv/bin/activate
 ```
+
+Install the dependencies listed in `requirements.txt`:
 
 ```bash
 uv pip install -r requirements.txt
 ```
 
-Run any branch with:
+Run the app with:
 
 ```bash
 shiny run app.py
@@ -42,32 +45,7 @@ shiny run app.py
 
 | Branch | Description |
 |--------|-------------|
+| `01_whole-game` | Whole game: `app.py` to an installable package (`src/` layout, `uv`, `pytest`, `run()`) |
 | `02.1_shiny-app` | Default "Hello Shiny" template |
 | `02.2_movies-app` | Movies scatter plot app |
 | `02.3_proj-app` | App with project structure |
-| `03.1_pyproject` | Add `pyproject.toml` metadata |
-| `03.2_uv` | uv environment management |
-| `03.3_create-package` | Full Python package structure |
-| `04_uv` | Editable install with uv |
-| `05_docstrings` | Docstrings on all public functions |
-| `06.1_exports` | `__init__.py` explicit exports |
-| `06.2_imports` | Package dependencies |
-| `07_data` | Data as package resource |
-| `08_run` | `run()` function + `__main__.py` |
-| `09_www` | Static resources |
-| `10_debugger` | debugpy integration |
-| `11_debug-print` | Debug printing patterns |
-| `12.1_debug-mods` | Debugging Shiny modules |
-| `12.2_mod-comms` | Module communication with `reactive.Value` |
-| `13_logging` | Python `logging` module |
-| `14_tests_suite` | pytest test suite |
-| `15_specs` | Test specifications |
-| `16.1_test-help` | pytest fixtures |
-| `16.2_test-data` | Test data |
-| `16.3_test-logger` | Test logging |
-| `16.4_test-snapshots` | Playwright snapshot tests |
-| `17_test-modules` | Testing Shiny modules |
-| `18_test-system` | System / integration tests |
-| `19_connect` | Posit Connect deployment |
-| `20_docker` | Docker deployment |
-| `21.1_gha-style` | GitHub Actions linting |
