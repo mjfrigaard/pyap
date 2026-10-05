@@ -1,16 +1,9 @@
-# This is a Shiny for Python application.
-# Run it with: shiny run app.py
-
-from shiny import App, ui, render
+from shiny import App, ui, render, run_app
 import matplotlib.pyplot as plt
-import numpy as np
 
-# Old Faithful geyser waiting time data (bimodal distribution)
-rng = np.random.default_rng(42)
-waiting = np.concatenate([
-    rng.normal(54, 5, 100),   # short-wait eruption cluster
-    rng.normal(80, 6, 172),   # long-wait eruption cluster
-])
+from pyap.data import geyser_waiting
+
+waiting = geyser_waiting()
 
 app_ui = ui.page_sidebar(
     ui.sidebar(
@@ -38,3 +31,8 @@ def server(input, output, session):
 
 
 app = App(app_ui, server)
+
+
+def run() -> None:
+    """Launch the pyap Shiny app in a browser."""
+    run_app("pyap.app:app", launch_browser=True)
