@@ -1,9 +1,9 @@
-# Run with: shiny run app.py
+# Run with: uv run shiny run src/pyap/app.py
 
 from shiny import App, ui, render, reactive
 import pandas as pd
 
-from utils import scatter_plot
+from pyap.utils import scatter_plot
 
 movies = pd.read_csv("movies.csv")
 
