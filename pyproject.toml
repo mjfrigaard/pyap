@@ -1,0 +1,15 @@
+[project]
+name = "pyap"
+version = "0.1.0"
+description = "A Shiny for Python app-package"
+readme = "README.md"
+authors = [
+    { name = "Martin Frigaard" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.8.0",
+    "numpy>=1.26.0",
+    "pandas>=2.1.0",
+    "shiny>=1.2.0",
+]
