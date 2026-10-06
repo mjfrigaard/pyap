@@ -22,23 +22,16 @@ cd pyap
 git checkout <branch_name>
 ```
 
-Create and activate a virtual environment (the `.venv/` folder isn't tracked by Git, so it carries over when you switch branches):
+Install the Python version and dependencies listed in `pyproject.toml` (uv creates the `.venv/` folder and `uv.lock` for us):
 
 ```bash
-uv venv
-source .venv/bin/activate
-```
-
-Install the dependencies listed in `requirements.txt`:
-
-```bash
-uv pip install -r requirements.txt
+uv sync
 ```
 
 Run the app with:
 
 ```bash
-shiny run app.py
+uv run shiny run app.py
 ```
 
 ## Branches
@@ -49,3 +42,5 @@ shiny run app.py
 | `02.1_shiny-app` | Default "Hello Shiny" template |
 | `02.2_movies-app` | Movies scatter plot app |
 | `02.3_proj-app` | App with project structure |
+| `03.1_pyproject` | Add `pyproject.toml` metadata and dependencies |
+| `03.2_uv` | uv environment management |
