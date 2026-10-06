@@ -31,7 +31,7 @@ uv sync
 Run the app with:
 
 ```bash
-uv run shiny run app.py
+uv run shiny run src/pyap/app.py
 ```
 
 ## Branches
@@ -44,3 +44,4 @@ uv run shiny run app.py
 | `02.3_proj-app` | App with project structure |
 | `03.1_pyproject` | Add `pyproject.toml` metadata and dependencies |
 | `03.2_uv` | uv environment management |
+| `03.3_create-package` | Full Python package structure |
