@@ -29,10 +29,10 @@ uv venv
 source .venv/bin/activate
 ```
 
-Install the dependencies listed in `requirements.txt`:
+Install the dependencies listed in `pyproject.toml`:
 
 ```bash
-uv pip install -r requirements.txt
+uv pip install -r pyproject.toml
 ```
 
 Run the app with:
@@ -49,3 +49,4 @@ shiny run app.py
 | `02.1_shiny-app` | Default "Hello Shiny" template |
 | `02.2_movies-app` | Movies scatter plot app |
 | `02.3_proj-app` | App with project structure |
+| `03.1_pyproject` | Add `pyproject.toml` metadata and dependencies |
