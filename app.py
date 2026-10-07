@@ -46,7 +46,7 @@ app_ui = ui.page_sidebar(
             selected="mpaa_rating",
         ),
         ui.input_slider("alpha", "Alpha:", min=0.0, max=1.0, value=0.4, step=0.05),
-        ui.input_slider("size", "Size:", min=1, max=5, value=3),
+        ui.input_slider("size", "Size:", min=1, max=5, value=2),
         ui.input_text(
             "plot_title",
             "Plot title",
