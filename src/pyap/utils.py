@@ -29,6 +29,7 @@ def scatter_plot(df, x_var, y_var, col_var, alpha_var, size_var, title=""):
         bbox_to_anchor=(1.05, 1),
         loc="upper left",
     )
+    ax.grid(alpha=0.3)
     plt.tight_layout()
 
     return fig
