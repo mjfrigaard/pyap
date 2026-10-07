@@ -45,3 +45,4 @@ uv run shiny run src/pyap/app.py
 | `03.1_pyproject` | Add `pyproject.toml` metadata and dependencies |
 | `03.2_uv` | uv environment management |
 | `03.3_create-package` | Full Python package structure |
+| `04_dev` | Development workflow: light grid added to `scatter_plot()` |
