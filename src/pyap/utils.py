@@ -24,12 +24,12 @@ def scatter_plot(df, x_var, y_var, col_var, alpha_var, size_var, title=""):
     ax.set_ylabel(y_var.replace("_", " ").title())
     if title:
         ax.set_title(title)
-    ax.legend(
+    ax.legend( # this is the code change 
         title=col_var.replace("_", " ").title(),
         bbox_to_anchor=(1.05, 1),
         loc="upper left",
     )
     ax.grid(alpha=0.3)
-    plt.tight_layout()
+    plt.tight_layout() # it ends here
 
     return fig
