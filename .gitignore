@@ -15,7 +15,7 @@ env/
 # uv
 
 # Documentation
-docs/
+site/
 
 # Jupyter
 .ipynb_checkpoints/
