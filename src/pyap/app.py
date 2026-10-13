@@ -1,4 +1,10 @@
 # Run with: uv run shiny run src/pyap/app.py
+"""Shiny app for exploring the movies data.
+
+Defines the UI (`app_ui`), the server function (`server()`), and the
+`app` object that `shiny run` looks for. The data are read from
+`movies.csv` in the working directory when this module is imported.
+"""
 
 from shiny import App, ui, render, reactive
 import pandas as pd
@@ -80,6 +86,18 @@ app_ui = ui.page_sidebar(
 
 
 def server(input, output, session):
+    """Server logic for the movies app.
+
+    Parameters
+    ----------
+    input : shiny.Inputs
+        Input values from the sidebar (`x`, `y`, `z`, `alpha`, `size`,
+        `plot_title`, and `update_plot_title`).
+    output : shiny.Outputs
+        Outputs rendered by the app (`scatterplot`).
+    session : shiny.Session
+        The current user session.
+    """
     # only updates title when button is clicked, runs on init with empty string
     @reactive.calc
     @reactive.event(input.update_plot_title, ignore_none=False, ignore_init=False)
